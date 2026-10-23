@@ -44,8 +44,9 @@ nav li a:hover{color:var(--ink)}
 .hero h1 .l2{color:var(--mute)}
 .hero .role{margin:22px 0 0;font-size:clamp(17px,2vw,21px);color:var(--mute);max-width:46ch;line-height:1.5}
 .hero .role b{color:var(--ink);font-weight:600}
-.hero .chips{display:flex;flex-wrap:wrap;gap:10px;margin-top:26px}
+.hero .chips{display:flex;flex-wrap:wrap;gap:10px;margin-top:26px;max-width:760px}
 .chip{padding:7px 14px;border:1px solid var(--line);border-radius:999px;font-size:14px;color:var(--mute);background:rgba(255,255,255,.03)}
+.chip b{color:var(--ink);font-weight:600}
 .chip i{display:inline-block;width:7px;height:7px;border-radius:50%;margin-right:8px;vertical-align:1px}
 .scroll{position:absolute;right:clamp(18px,4vw,56px);bottom:28px;font-size:12px;color:var(--mute);letter-spacing:.08em;writing-mode:vertical-rl}
 
@@ -125,12 +126,12 @@ footer{padding:0 0 40px;text-align:center;color:var(--mute);font-size:13px}
   <canvas id="flow" aria-hidden="true"></canvas>
   <div class="wrap">
     <h1>Manan <span class="l2">Patel</span></h1>
-    <p class="role"><b>MS Computer Science, Northeastern University.</b><br>Working on data, AI and machine learning in Boston.</p>
+    <p class="role"><b>MS Computer Science, Northeastern University.</b><br>Software engineer who builds with data: models, pipelines, analysis, and the products on top of them.</p>
     <div class="chips">
-      <span class="chip"><i style="background:var(--violet)"></i>PyTorch · TensorFlow · scikit-learn</span>
-      <span class="chip"><i style="background:var(--amber)"></i>Python · SQL · PySpark</span>
-      <span class="chip"><i style="background:var(--mint)"></i>Computer vision · LLMs · forecasting · experimentation</span>
-      <span class="chip"><i style="background:var(--cyan)"></i>AWS · Airflow · dbt · Docker</span>
+      <span class="chip"><i style="background:var(--violet)"></i><b>Machine Learning &amp; AI</b> · PyTorch, TensorFlow, scikit-learn, computer vision, LLMs</span>
+      <span class="chip"><i style="background:var(--amber)"></i><b>Data Science</b> · forecasting, experimentation, causal inference, XGBoost</span>
+      <span class="chip"><i style="background:var(--mint)"></i><b>Data Engineering &amp; Analytics</b> · SQL, PySpark, Kafka, Airflow, dbt, Tableau</span>
+      <span class="chip"><i style="background:var(--cyan)"></i><b>Software Engineering</b> · Python, FastAPI, Docker, AWS, CI/CD</span>
     </div>
   </div>
   <div class="scroll">scroll</div>
