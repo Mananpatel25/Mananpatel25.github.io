@@ -44,10 +44,14 @@ nav li a:hover{color:var(--ink)}
 .hero h1 .l2{color:var(--mute)}
 .hero .role{margin:22px 0 0;font-size:clamp(17px,2vw,21px);color:var(--mute);max-width:46ch;line-height:1.5}
 .hero .role b{color:var(--ink);font-weight:600}
-.hero .chips{display:flex;flex-wrap:wrap;gap:10px;margin-top:26px;max-width:760px}
-.chip{padding:7px 14px;border:1px solid var(--line);border-radius:999px;font-size:14px;color:var(--mute);background:rgba(255,255,255,.03)}
-.chip b{color:var(--ink);font-weight:600}
-.chip i{display:inline-block;width:7px;height:7px;border-radius:50%;margin-right:8px;vertical-align:1px}
+.hero .meta{display:flex;flex-wrap:wrap;align-items:center;gap:14px;margin-top:22px;font-size:16px;color:var(--mute)}
+.hero .meta .sep{width:4px;height:4px;border-radius:50%;background:var(--mute);opacity:.6}
+.hero .meta #clock{font-variant-numeric:tabular-nums;color:var(--ink)}
+.hero .cta{display:flex;gap:12px;margin-top:30px}
+.hero .cta a{padding:11px 20px;border-radius:999px;font-weight:600;font-size:15px;border:1px solid var(--line);color:var(--ink);transition:all .25s}
+.hero .cta a:first-child{background:var(--ink);color:var(--bg);border-color:transparent}
+.hero .cta a:hover{border-color:var(--cyan)}
+.hero .cta a:first-child:hover{background:var(--cyan)}
 .scroll{position:absolute;right:clamp(18px,4vw,56px);bottom:28px;font-size:12px;color:var(--mute);letter-spacing:.08em;writing-mode:vertical-rl}
 
 /* sections */
@@ -126,13 +130,14 @@ footer{padding:0 0 40px;text-align:center;color:var(--mute);font-size:13px}
   <canvas id="flow" aria-hidden="true"></canvas>
   <div class="wrap">
     <h1>Manan <span class="l2">Patel</span></h1>
-    <p class="role"><b>MS Computer Science, Northeastern University.</b><br>Software engineer who builds with data: models, pipelines, analysis, and the products on top of them.</p>
-    <div class="chips">
-      <span class="chip"><i style="background:var(--violet)"></i><b>Machine Learning &amp; AI</b> · PyTorch, TensorFlow, scikit-learn, computer vision, LLMs</span>
-      <span class="chip"><i style="background:var(--amber)"></i><b>Data Science</b> · forecasting, experimentation, causal inference, XGBoost</span>
-      <span class="chip"><i style="background:var(--mint)"></i><b>Data Engineering &amp; Analytics</b> · SQL, PySpark, Kafka, Airflow, dbt, Tableau</span>
-      <span class="chip"><i style="background:var(--cyan)"></i><b>Software Engineering</b> · Python, FastAPI, Docker, AWS, CI/CD</span>
+    <div class="meta">
+      <span>MS Computer Science, Northeastern University</span>
+      <span class="sep"></span>
+      <span>Boston, MA</span>
+      <span class="sep"></span>
+      <span id="clock" aria-live="off"></span>
     </div>
+    <div class="cta"><a href="#work">See the work</a><a href="mailto:manrp2625@gmail.com">Email</a></div>
   </div>
   <div class="scroll">scroll</div>
 </header>
@@ -250,6 +255,9 @@ footer{padding:0 0 40px;text-align:center;color:var(--mute);font-size:13px}
 <footer>Manan Patel · Boston</footer>
 
 <script>
+// Live Boston time
+(()=>{const el=document.getElementById('clock');if(!el)return;const f=()=>{el.textContent=new Intl.DateTimeFormat('en-US',{hour:'numeric',minute:'2-digit',timeZone:'America/New_York'}).format(new Date())+' local';};f();setInterval(f,15000);})();
+
 // Card glow follows the cursor
 document.querySelectorAll('.card').forEach(c=>{
   c.addEventListener('pointermove',e=>{const r=c.getBoundingClientRect();c.style.setProperty('--mx',(e.clientX-r.left)+'px');c.style.setProperty('--my',(e.clientY-r.top)+'px');});
