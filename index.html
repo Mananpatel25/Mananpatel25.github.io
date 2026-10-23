@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Manan Patel</title>
-<meta name="description" content="Manan Patel — MS Computer Science, Northeastern. Data, AI and machine learning. Boston.">
+<meta name="description" content="Manan Patel. MS Computer Science, Northeastern. Data, AI and machine learning. Boston.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Syne:wght@500;600;700;800&family=Manrope:wght@400;500;600&display=swap" rel="stylesheet">
 <style>
@@ -40,9 +40,9 @@ nav li a:hover{color:var(--ink)}
 .hero{position:relative;min-height:calc(100vh - 64px);display:grid;align-items:end;padding-bottom:70px;overflow:hidden}
 #flow{position:absolute;inset:0;width:100%;height:100%;display:block}
 .hero .wrap{position:relative}
-.hero h1{font-family:var(--display);font-weight:800;font-size:clamp(56px,11vw,150px);line-height:.9;letter-spacing:-.04em;margin:0}
-.hero h1 .l2{display:block;color:transparent;-webkit-text-stroke:1.5px rgba(238,241,248,.7)}
-.hero .role{margin:26px 0 0;font-size:clamp(17px,2vw,22px);color:var(--mute);max-width:46ch}
+.hero h1{font-family:var(--display);font-weight:700;font-size:clamp(44px,7vw,88px);line-height:1.05;letter-spacing:-.02em;margin:0}
+.hero h1 .l2{color:var(--mute)}
+.hero .role{margin:22px 0 0;font-size:clamp(17px,2vw,21px);color:var(--mute);max-width:46ch;line-height:1.5}
 .hero .role b{color:var(--ink);font-weight:600}
 .hero .chips{display:flex;flex-wrap:wrap;gap:10px;margin-top:26px}
 .chip{padding:7px 14px;border:1px solid var(--line);border-radius:999px;font-size:14px;color:var(--mute);background:rgba(255,255,255,.03)}
@@ -52,6 +52,8 @@ nav li a:hover{color:var(--ink)}
 /* sections */
 section{padding:110px 0}
 .sec-head{display:flex;align-items:baseline;justify-content:space-between;gap:20px;margin-bottom:44px;flex-wrap:wrap}
+.sec-head p{text-wrap:balance}
+.card p,.job li,.hero .role{text-wrap:pretty}
 .sec-head h2{font-family:var(--display);font-weight:700;font-size:clamp(30px,4.5vw,52px);letter-spacing:-.03em;margin:0;line-height:1}
 .sec-head p{margin:0;color:var(--mute);max-width:46ch}
 
@@ -86,7 +88,9 @@ section{padding:110px 0}
 .job .when{font-size:13px;color:var(--mute);margin-bottom:10px}
 .job h3{font-family:var(--display);font-size:22px;margin:0;letter-spacing:-.02em}
 .job .t{color:var(--mute);font-size:15px;margin:2px 0 14px}
-.job p{margin:0;font-size:15px;color:#C5CBD9}
+.job ul{margin:0;padding-left:18px;font-size:15px;color:#C5CBD9;line-height:1.55}
+.job li{margin:0 0 8px}
+.job li::marker{color:var(--cyan)}
 .job.edu{display:flex;flex-direction:column;justify-content:center}
 @media (max-width:760px){.timeline{grid-template-columns:1fr}}
 
@@ -120,8 +124,8 @@ footer{padding:0 0 40px;text-align:center;color:var(--mute);font-size:13px}
 <header class="hero">
   <canvas id="flow" aria-hidden="true"></canvas>
   <div class="wrap">
-    <h1>Manan<span class="l2">Patel</span></h1>
-    <p class="role"><b>MS Computer Science, Northeastern University.</b> Based in Boston, working on data, AI and machine learning — from the raw signal to the model to the decision it supports.</p>
+    <h1>Manan <span class="l2">Patel</span></h1>
+    <p class="role"><b>MS Computer Science, Northeastern University.</b><br>Working on data, AI and machine learning in Boston.</p>
     <div class="chips">
       <span class="chip"><i style="background:var(--violet)"></i>PyTorch · TensorFlow · scikit-learn</span>
       <span class="chip"><i style="background:var(--amber)"></i>Python · SQL · PySpark</span>
@@ -187,7 +191,7 @@ footer{padding:0 0 40px;text-align:center;color:var(--mute);font-size:13px}
     <a class="card " href="https://github.com/Mananpatel25/Time-Series-Forecasting-of-Sales-at-Walmart-Superstores" style="--c:var(--amber);--glow:rgba(255,199,92,.2)">
       <div class="tag"><span>Solo</span><em>2024</em></div>
       <h3>Forecasting weekly sales at Walmart</h3>
-      <p>Weekly store sales modeled two ways: tree ensembles with engineered calendar and holiday features, and auto-ARIMA on the series itself. Feature selection cut the random-forest error by two-thirds.</p>
+      <p>Weekly store sales modeled two ways: tree ensembles with engineered calendar and holiday features, and auto-ARIMA on the series itself. Feature selection cut the random forest error by two-thirds.</p>
       <div class="metrics"><div><b>WMAE 5,850 → 1,801</b><span>after feature selection</span></div><div><b>R² 0.98</b><span>random forest</span></div></div>
       <div class="foot"><span class="stack">pandas · scikit-learn · XGBoost · statsmodels · pmdarima</span><span class="go">Repo <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M3 11L11 3M11 3H5M11 3v6" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg></span></div>
     </a>
@@ -230,13 +234,28 @@ footer{padding:0 0 40px;text-align:center;color:var(--mute);font-size:13px}
 <section id="experience"><div class="wrap">
   <div class="sec-head"><h2>Experience</h2></div>
   <div class="timeline">
-    <div class="job"><div class="when">June 2026 — now · Boston</div><h3>KeelWorks</h3><div class="t">Data engineer &amp; analyst</div>
-      <p>Own the data layer and the models on top of it. Built Python/SQL pipelines on Airflow that load product and usage data into an S3/Parquet lake modeled in dbt, with Great Expectations quality gates so bad data fails loudly. On that foundation, defined the core KPIs, built the A/B readouts with proper significance and confidence intervals, and ship ML-backed features — feature engineering, evaluation, FastAPI serving in Docker on AWS, experiments tracked so results reproduce.</p></div>
-    <div class="job"><div class="when">Jan 2025 — Feb 2026 · Boston</div><h3>Northeastern University</h3><div class="t">Applied research engineer, marine acoustics</div>
-      <p>Built a classifier to identify underwater mammal species from a large set of hydrophone recordings, testing Random Forest and SVM against a CNN-LSTM and landing around 93% accuracy — which saved the marine biology team most of their manual labeling and supported a peer-reviewed paper. Engineered the feature-extraction pipeline (FFT, MFCCs, spectrograms) in Python and scikit-learn with batched processing, cutting compute time 15%, and the preprocessing that turns raw, variable-length recordings into clean spectrogram and PSD inputs with Librosa, SciPy and torchaudio.</p></div>
-    <div class="job"><div class="when">Jan 2023 — May 2024 · Ahmedabad</div><h3>GetOnData Solutions</h3><div class="t">Data engineer &amp; analyst</div>
-      <p>Two halves of the same job. The analysis: segmented customers with K-Means and RFM on monthly e-commerce transactions, and the targeted campaigns that followed lifted retention 24%; forecast product demand from 18 months of sales with SARIMA and Prophet, giving the inventory team lead time that eliminated most stockouts. The plumbing: PySpark + Airflow ETL on 10M+ daily rows into Snowflake dimensional models, incremental loads that cut the daily run from 3 hours to 40 minutes, models served through FastAPI with Redis caching on AWS.</p></div>
-    <div class="job edu"><div class="when">Education</div><h3>MS Computer Science</h3><div class="t">Northeastern University, 2024 — 2026</div><h3 style="margin-top:14px">B.Tech Computer Science</h3><div class="t" style="margin-bottom:0">Charotar University of Science and Technology, 2020 — 2024</div></div>
+    <div class="job"><div class="when">June 2026 to present · Boston</div><h3>KeelWorks</h3><div class="t">Data engineer &amp; analyst</div>
+      <ul>
+        <li>Built Python and SQL pipelines on Airflow that load product and usage data into an S3/Parquet lake modeled in dbt.</li>
+        <li>Added Great Expectations quality gates so bad data fails the run instead of reaching dashboards.</li>
+        <li>Defined the core KPIs and built A/B test readouts with significance and confidence intervals.</li>
+        <li>Ship ML-backed features end to end: feature engineering, evaluation, FastAPI serving in Docker on AWS.</li>
+      </ul></div>
+    <div class="job"><div class="when">January 2025 to February 2026 · Boston</div><h3>Northeastern University</h3><div class="t">Applied research engineer, marine acoustics</div>
+      <ul>
+        <li>Built a classifier that identifies underwater mammal species from hydrophone recordings, testing Random Forest and SVM against a CNN-LSTM and reaching about 93% accuracy.</li>
+        <li>Saved the marine biology team most of their manual labeling; the work supported a peer-reviewed paper.</li>
+        <li>Engineered the feature extraction pipeline (FFT, MFCCs, spectrograms) in Python and scikit-learn with batched processing, cutting compute time 15%.</li>
+        <li>Built preprocessing that turns raw, variable-length recordings into clean spectrogram and PSD inputs with Librosa, SciPy and torchaudio.</li>
+      </ul></div>
+    <div class="job"><div class="when">January 2023 to May 2024 · Ahmedabad</div><h3>GetOnData Solutions</h3><div class="t">Data engineer &amp; analyst</div>
+      <ul>
+        <li>Segmented customers with K-Means and RFM on monthly e-commerce transactions; the targeted campaigns that followed lifted retention 24%.</li>
+        <li>Forecast product demand from 18 months of sales with SARIMA and Prophet, giving the inventory team lead time that eliminated most stockouts.</li>
+        <li>Built PySpark and Airflow ETL on 10M+ daily rows into Snowflake dimensional models; incremental loads cut the daily run from 3 hours to 40 minutes.</li>
+        <li>Served models through FastAPI with Redis caching on AWS.</li>
+      </ul></div>
+    <div class="job edu"><div class="when">Education</div><h3>MS Computer Science</h3><div class="t">Northeastern University, 2024 to 2026</div><h3 style="margin-top:14px">B.Tech Computer Science</h3><div class="t" style="margin-bottom:0">Charotar University of Science and Technology, 2020 to 2024</div></div>
   </div>
 </div></section>
 
